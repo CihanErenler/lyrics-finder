@@ -58,11 +58,9 @@ const displaySongs = (songs) => {
               .map(
                 (song) => `
                 <li class="list-item">
-                <div class="cover">
-                <img src=${song.artist.picture_small}
-                </div>
+                <span>
                 <a class="artist" href="${song.artist.link}" target="_blank">${song.artist.name}</a> - 
-                ${song.title} </div>
+                ${song.title} </span>
                 <button class="btn show-lyrics" data-artist="${song.artist.name}" data-song="${song.title}">Lyrics</button>
                 </li>
             `
