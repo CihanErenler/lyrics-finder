@@ -103,6 +103,8 @@ async function getLyrics(artistName, songName) {
   const data = await fetch(`${url}/v1/${artistName}/${songName}`);
   const jsonData = await data.json();
 
+  console.log(jsonData);
+
   const lyrics = jsonData.lyrics.replace(/(\r\n|\r|\n)/g, "<br>");
 
   result.innerHTML = `

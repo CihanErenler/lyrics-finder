@@ -18,7 +18,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 130px 0;
+  padding: 100px 20px;
   position: relative;
 }
 
@@ -148,12 +148,7 @@ input:focus {
   align-items: center;
   justify-content: space-between;
   padding: 8px;
-  /* border-bottom: 1px solid #ddd; */
 }
-
-/* .container ul li:nth-child(odd) {
-  background-color: rgb(223, 223, 223);
-} */
 
 .container ul li a {
   text-decoration: none;
@@ -206,5 +201,22 @@ input:focus {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+/* Media query */
+@media (max-width: 620px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .container ul li {
+    font-size: 14px;
+  }
+
+  .container ul li span {
+    text-align: left;
   }
 }
