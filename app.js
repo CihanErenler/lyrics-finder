@@ -40,7 +40,7 @@ result.addEventListener("click", (e) => {
 
 // Search Songs
 const searchSongs = async (value) => {
-  result.innerHTML = "<h1>Loading...</h1>";
+  result.innerHTML = "<div class='spinner'></div>";
   more.innerHTML = "";
   const data = await fetch(`${url}/suggest/${value}`);
   const songs = await data.json();
@@ -97,7 +97,7 @@ async function getMoreSongs(url) {
 
 // Get lyrics
 async function getLyrics(artistName, songName) {
-  result.innerHTML = "<h1>Loading...</h1>";
+  result.innerHTML = "<div class='spinner'></div>";
   more.innerHTML = "";
 
   const data = await fetch(`${url}/v1/${artistName}/${songName}`);
